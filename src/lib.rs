@@ -83,7 +83,6 @@ fn coupled_pendulum_ode(cond: [f32; 4], step_size: f32) -> [f32; 4] {
 #[pymodule]
 fn simulations(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(coupled_pendulum, m)?)?;
-    m.add_function(wrap_pyfunction!(simple_string, m)?)?;
     m.add_function(wrap_pyfunction!(string, m)?)?;
     Ok(())
 }
